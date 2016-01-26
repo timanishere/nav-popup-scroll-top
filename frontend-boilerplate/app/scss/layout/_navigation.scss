@@ -1,0 +1,92 @@
+nav {
+	background-color: white;
+	width: 100%;
+	height: auto;
+
+	ul {
+		list-style-type: none;
+	}
+}
+
+.menu-lrg-screen {
+
+	li {
+		float: left;
+
+		a{
+			display: block;
+			border-right: 1px solid grey;
+			padding: 10px;
+			text-align: center;
+			font-size: 12px;
+			transition: all 0.3s ease-in-out;
+
+			&:link, &:visited {
+				color: black;
+			}
+
+			&:hover, &:active {
+				color: white;
+				background-color: black;
+			}
+
+		}
+	}
+}
+
+.menu-sml-screen {
+	display: none;
+	overflow: hidden;
+	
+	li {
+
+		a {
+			display: block;
+			width: 100%;
+			border-bottom: 1px solid white;
+			padding: 4px;
+			background-color: black;
+			font-size: 12px;
+			transition: all 0.3s ease-in-out;
+
+			&:link, &:visited {
+				color: white;
+			}
+
+			&:hover, &:active {
+				color: black;
+				background-color: white;
+			}
+		}
+	}
+}
+
+.burger-menu {
+	display: none;
+	font-size: 12px;
+	padding: 10px;
+	border: 1px solid black;
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		cursor: pointer;
+		color: white;
+		background-color: black;
+	}
+
+}
+
+
+
+
+//-- BREAKPOINT --//
+@media only screen and (max-width: 630px) {
+	.menu-lrg-screen {
+		display: none;
+	}
+
+	.burger-menu {
+		display: inline-block;
+	}
+}
+
