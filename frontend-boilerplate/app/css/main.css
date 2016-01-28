@@ -2079,6 +2079,12 @@
 .bg-color-white {
   background-color: white; }
 
+.submenu-blank-line {
+  color: black !important; }
+  .submenu-blank-line:hover {
+    background-color: black !important;
+    cursor: default; }
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -2086,42 +2092,30 @@
 
 body {
   background-color: grey;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  overflow-x: hidden; }
 
 a {
   text-decoration: none; }
 
-nav {
-  background-color: white;
+.container {
   width: 100%;
-  height: auto; }
-  nav ul {
-    list-style-type: none; }
-
-.menu-lrg-screen li {
-  float: left; }
-  .menu-lrg-screen li a {
-    display: block;
-    border-right: 1px solid grey;
-    padding: 10px;
-    text-align: center;
-    font-size: 12px;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out; }
-    .menu-lrg-screen li a:link, .menu-lrg-screen li a:visited {
-      color: black; }
-    .menu-lrg-screen li a:hover, .menu-lrg-screen li a:active {
-      color: white;
-      background-color: black; }
+  height: 2000px;
+  border: 2px solid red;
+  position: relative;
+  top: 33px;
+  z-index: -1; }
 
 .menu-sml-screen {
   display: none;
-  overflow: hidden; }
+  overflow: hidden;
+  height: auto;
+  position: relative; }
   .menu-sml-screen li a {
     display: block;
     width: 100%;
     border-bottom: 1px solid white;
-    padding: 4px;
+    padding: 19px 14px;
     background-color: black;
     font-size: 12px;
     -webkit-transition: all 0.3s ease-in-out;
@@ -2131,6 +2125,10 @@ nav {
     .menu-sml-screen li a:hover, .menu-sml-screen li a:active {
       color: black;
       background-color: white; }
+
+.sml-menu-container {
+  background-color: black;
+  overflow: hidden; }
 
 .burger-menu {
   display: none;
@@ -2144,8 +2142,88 @@ nav {
     color: white;
     background-color: black; }
 
+.go-back-icon {
+  margin-right: 5px; }
+
+.submenu-sml-screen {
+  overflow: hidden;
+  height: auto;
+  display: block;
+  position: absolute;
+  top: 34px;
+  left: 100%; }
+  .submenu-sml-screen li a {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid white;
+    padding: 19px 14px;
+    background-color: black;
+    font-size: 12px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    .submenu-sml-screen li a:link, .submenu-sml-screen li a:visited {
+      color: white; }
+    .submenu-sml-screen li a:hover, .submenu-sml-screen li a:active {
+      color: black;
+      background-color: white; }
+
+.slideOut {
+  left: 100% !important;
+  display: none !important;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+
+.slideIn {
+  left: 0% !important;
+  display: block !important;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+
+nav {
+  background-color: white;
+  width: 100%;
+  height: auto;
+  position: fixed; }
+  nav ul {
+    list-style-type: none;
+    width: 100%;
+    height: 0px; }
+
+.menu-lrg-screen {
+  height: 0px; }
+  .menu-lrg-screen li {
+    float: left; }
+    .menu-lrg-screen li a {
+      display: block;
+      border-right: 1px solid grey;
+      padding: 10px;
+      text-align: center;
+      font-size: 12px;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      width: 94px; }
+      .menu-lrg-screen li a:link, .menu-lrg-screen li a:visited {
+        color: black; }
+      .menu-lrg-screen li a:hover, .menu-lrg-screen li a:active {
+        color: white;
+        background-color: black; }
+
+.submenu-lrg-screen {
+  display: none; }
+  .submenu-lrg-screen li {
+    float: none;
+    background-color: white;
+    border-bottom: 1px solid black; }
+    .submenu-lrg-screen li:first-child {
+      border-top: 1px solid black; }
+
+.menu-lrg-screen li:hover .submenu-lrg-screen {
+  display: block; }
+
 @media only screen and (max-width: 630px) {
   .menu-lrg-screen {
+    display: none; }
+  .submenu-lrg-screen {
     display: none; }
   .burger-menu {
     display: inline-block; } }
