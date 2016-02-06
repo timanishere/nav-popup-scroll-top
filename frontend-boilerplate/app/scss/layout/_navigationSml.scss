@@ -1,6 +1,6 @@
 //-- MENU SMALL SCREEN --//
 .menu-sml-screen {
-	display: none;
+	display: block;
 	overflow: hidden;
 	height: auto;
 	position: relative;
@@ -11,10 +11,10 @@
 			display: block;
 			width: 100%;
 			border-bottom: 1px solid white;
-			padding: 19px 14px;
+			padding: 14px 14px;
 			background-color: black;
 			font-size: 12px;
-			transition: all 0.3s ease-in-out;
+			transition: all 0.1s linear;
 
 			&:link, &:visited {
 				color: white;
@@ -32,9 +32,24 @@
 // -- SMALL MENU CONTAINER --//
 .sml-menu-container {
 	background-color: black;
-	overflow: hidden;
+	//overflow: hidden;
+	transition: all 0.5s linear;
+	position: relative;
+	text-align: left;
+	width: 50%;
+	right:0%;
 }
 
+.sml-screen-wrapper {
+	.ng-hide {
+		right: 50%;
+	}
+}
+
+//-- BURGER MENU ICON --//
+.burger-wrapper {
+	background-color: white;
+}
 
 //-- BURGER MENU ICON --//
 .burger-menu {
@@ -63,8 +78,9 @@
 	height: auto;
 	display: block;
 	position: absolute;
-    top: 34px;
-    left: 100%;
+    top: 0px;
+    right: 100%;
+    transition: all 0.5s linear;
 
 	li {
 
@@ -72,7 +88,7 @@
 			display: block;
 			width: 100%;
 			border-bottom: 1px solid white;
-			padding: 19px 14px;
+			padding: 14px 14px;
 			background-color: black;
 			font-size: 12px;
 			transition: all 0.3s ease-in-out;
@@ -90,16 +106,3 @@
 }
 
 //-- SUBMENU LARGE SCREEN ENDS HERE --//
-
-//-- TRANSITION FX --//
-.slideOut {
-	left: 100% !important;
-	display: none !important;
-	transition: all 0.5s ease-in-out;
-}
-
-.slideIn {
-	left: 0% !important;
-	display: block !important;
-	transition: all 0.5s ease-in-out;
-}

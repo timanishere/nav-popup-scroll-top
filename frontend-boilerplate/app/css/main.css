@@ -2107,7 +2107,7 @@ a {
   z-index: -1; }
 
 .menu-sml-screen {
-  display: none;
+  display: block;
   overflow: hidden;
   height: auto;
   position: relative; }
@@ -2115,11 +2115,11 @@ a {
     display: block;
     width: 100%;
     border-bottom: 1px solid white;
-    padding: 19px 14px;
+    padding: 14px 14px;
     background-color: black;
     font-size: 12px;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out; }
+    -webkit-transition: all 0.1s linear;
+    transition: all 0.1s linear; }
     .menu-sml-screen li a:link, .menu-sml-screen li a:visited {
       color: white; }
     .menu-sml-screen li a:hover, .menu-sml-screen li a:active {
@@ -2128,7 +2128,18 @@ a {
 
 .sml-menu-container {
   background-color: black;
-  overflow: hidden; }
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  position: relative;
+  text-align: left;
+  width: 50%;
+  right: 0%; }
+
+.sml-screen-wrapper .ng-hide {
+  right: 50%; }
+
+.burger-wrapper {
+  background-color: white; }
 
 .burger-menu {
   display: none;
@@ -2150,13 +2161,15 @@ a {
   height: auto;
   display: block;
   position: absolute;
-  top: 34px;
-  left: 100%; }
+  top: 0px;
+  right: 100%;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear; }
   .submenu-sml-screen li a {
     display: block;
     width: 100%;
     border-bottom: 1px solid white;
-    padding: 19px 14px;
+    padding: 14px 14px;
     background-color: black;
     font-size: 12px;
     -webkit-transition: all 0.3s ease-in-out;
@@ -2167,23 +2180,12 @@ a {
       color: black;
       background-color: white; }
 
-.slideOut {
-  left: 100% !important;
-  display: none !important;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out; }
-
-.slideIn {
-  left: 0% !important;
-  display: block !important;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out; }
-
 nav {
   background-color: white;
   width: 100%;
   height: auto;
-  position: fixed; }
+  position: fixed;
+  z-index: 99; }
   nav ul {
     list-style-type: none;
     width: 100%;
@@ -2221,12 +2223,18 @@ nav {
   display: block; }
 
 @media only screen and (max-width: 630px) {
+  nav {
+    background-color: transparent; }
   .menu-lrg-screen {
     display: none; }
   .submenu-lrg-screen {
-    display: none; }
+    display: block; }
   .burger-menu {
     display: inline-block; } }
+
+@media only screen and (min-width: 630px) {
+  .sml-screen-wrapper {
+    display: none; } }
 
 .row:after {
   content: "";

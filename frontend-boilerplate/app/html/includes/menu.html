@@ -1,0 +1,98 @@
+<!-- MENU LARGE SCREEN STARTS HERE -->
+<ul class="menu-lrg-screen">
+	<li> 
+		<a href="#">menu 1</a>
+		<ul class="submenu-lrg-screen" ng-controller="menuCtrl">
+			<li ng-repeat="submenuList_1 in submenuList_1"><a href="#">{{submenuList_1}}</a>
+		</ul>
+	</li>
+
+	<li> 
+		<a href="#">menu 2</a>
+		<ul class="submenu-lrg-screen" ng-controller="menuCtrl">
+			<li ng-repeat="submenuList_2 in submenuList_2"><a href="#">{{submenuList_2}}</a>
+		</ul>
+	</li>
+
+	<li> 
+		<a href="#">menu 3</a>
+		<ul class="submenu-lrg-screen" ng-controller="menuCtrl">
+			<li ng-repeat="submenuList_3 in submenuList_3"><a href="#">{{submenuList_3}}</a>
+		</ul>
+	</li>
+
+	<li> 
+		<a href="#">menu 4</a>
+		<ul class="submenu-lrg-screen" ng-controller="menuCtrl">
+			<li ng-repeat="submenuList_4 in submenuList_4"><a href="#">{{submenuList_4}}</a>
+		</ul>
+	</li>
+
+	<li> 
+		<a href="#">menu 5</a>
+		<ul class="submenu-lrg-screen" ng-controller="menuCtrl">
+			<li ng-repeat="submenuList_5 in submenuList_5"><a href="#">{{submenuList_5}}</a>
+		</ul>
+	</li>
+</ul>
+<!-- MENU LARGE SCREEN ENDS HERE -->
+
+
+<!-- MENU SMALL SCREEN STARTS HERE -->
+<div ng-controller="menuCtrl" class="sml-screen-wrapper">
+	
+	<div class="burger-wrapper">
+		<i class="fa fa-bars burger-menu" ng-click="showMenu()"></i>
+	</div>
+
+	<div class="sml-menu-container" ng-hide="showMenuList">
+		<ul class="menu-sml-screen">
+			<li><a href="#" ng-click="showSubmenuList_1()">menu 1</a></li>
+			<li><a href="#" ng-click="showSubmenuList_2()">menu 2</a></li>
+			<li><a href="#" ng-click="showSubmenuList_3()">menu 3</a></li>
+			<li><a href="#" ng-click="showSubmenuList_4()">menu 4</a></li>
+			<li><a href="#" ng-click="showSubmenuList_5()">menu 5</a></li>
+		</ul>
+
+		<!-- SUBMENU FOR MENU 1 STARTS HERE -->
+		<ul class="submenu-sml-screen">
+			<li ng-repeat="submenuList_1 in submenuList_1"><a href="#">{{submenuList_1}}</a></li>
+			<li><a href="#" class="submenu-blank-line">#</a></li>
+			<li><a href="#" class="go-back-icon" ng-click="goBack()"><i class="fa fa-caret-left go-back-icon"></i>Go Back</a></li>
+		</ul>
+		
+
+		<!-- SUBMENU FOR MENU 2 STARTS HERE -->
+		<ul class="submenu-sml-screen">
+			<li ng-repeat="submenuList_2 in submenuList_2"><a href="#">{{submenuList_2}}</a></li>
+			<li><a href="#" class="submenu-blank-line">#</a></li>
+			<li><a href="#" class="go-back-icon" ng-click="goBack()"><i class="fa fa-caret-left go-back-icon"></i>Go Back</a></li>
+		</ul>
+		
+
+		<!-- SUBMENU FOR MENU 3 STARTS HERE -->
+		<ul class="submenu-sml-screen">
+			<li ng-repeat="submenuList_3 in submenuList_3"><a href="#">{{submenuList_3}}</a></li>
+			<li><a href="#" class="submenu-blank-line">#</a></li>
+			<li><a href="#" class="go-back-icon" ng-click="goBack()"><i class="fa fa-caret-left go-back-icon"></i>Go Back</a></li>
+		</ul>
+		
+
+		<!-- SUBMENU FOR MENU 4 STARTS HERE -->
+		<ul class="submenu-sml-screen">
+			<li ng-repeat="submenuList_4 in submenuList_4"><a href="#">{{submenuList_4}}</a></li>
+			<li><a href="#" class="submenu-blank-line">#</a></li>
+			<li><a href="#" class="go-back-icon" ng-click="goBack()"><i class="fa fa-caret-left go-back-icon"></i>Go Back</a></li>
+		</ul>
+		<!-- SUBMENU FOR MENU 4 ENDS HERE -->
+
+		<!-- SUBMENU FOR MENU 5 STARTS HERE -->
+		<ul class="submenu-sml-screen">
+			<li ng-repeat="submenuList_5 in submenuList_5"><a href="#">{{submenuList_5}}</a></li>
+			<li><a href="#" class="submenu-blank-line">#</a></li>
+			<li><a href="#" class="go-back-icon" ng-click="goBack()"><i class="fa fa-caret-left go-back-icon"></i>Go Back</a></li>
+		</ul>
+		<!-- SUBMENU FOR MENU 5 ENDS HERE -->
+	</div>
+</div>
+<!-- MENU SMALL SCREEN ENDS HERE -->

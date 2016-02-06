@@ -4,6 +4,7 @@ nav {
 	width: 100%;
 	height: auto;
 	position: fixed;
+	z-index: 99;
 
 
 	ul {
@@ -81,15 +82,26 @@ nav {
 
 //-- BREAKPOINTS --//
 @media only screen and (max-width: 630px) {
+	nav {
+		background-color: transparent;
+	}
 	.menu-lrg-screen {
 		display: none;
 	}
 	.submenu-lrg-screen {
-		display: none;
+		display: block;
 	}
 
 	.burger-menu {
 		display: inline-block;
 	}
 }
+
+@media only screen and (min-width: 630px) {
+	.sml-screen-wrapper {
+		display: none;
+	}
+}
+
+
 
