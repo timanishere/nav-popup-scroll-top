@@ -2301,4 +2301,50 @@ nav {
   float: left;
   padding: 15px; }
 
+.popup-container {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  display: none;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+  opacity: 0; }
+  .popup-container .popup-content {
+    height: 450px;
+    width: 400px;
+    background-color: white;
+    margin: 0 auto; }
+    .popup-container .popup-content .close-btn {
+      float: right;
+      color: black;
+      padding: 27px 10px; }
+    .popup-container .popup-content h1 {
+      clear: both;
+      text-align: center;
+      padding-bottom: 10px; }
+    .popup-container .popup-content p {
+      text-align: center;
+      padding: 0 5px; }
+
+.scroll-top-btn {
+  position: fixed;
+  top: 89%;
+  right: 3%;
+  font-size: 3rem;
+  color: white;
+  background-color: black;
+  width: 43px;
+  height: auto;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .scroll-top-btn:hover {
+    opacity: 0.6 !important; }
+
 /*# sourceMappingURL=main.css.map */

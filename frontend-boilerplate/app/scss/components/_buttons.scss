@@ -1,0 +1,17 @@
+.scroll-top-btn {
+	position: fixed;
+    top: 89%;
+    right: 3%;
+    font-size: 3rem;
+    color: white;
+    background-color: black;
+    width: 43px;
+    height: auto;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+    	opacity: 0.6 !important;
+    }
+}

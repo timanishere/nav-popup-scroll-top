@@ -464,13 +464,54 @@ $(function() {
 	
 });
 //------ SUBMENU FUNCTION ENDS HERE ------//
-//---------- TESTING CLICK EVENT STARTS HERE ----------//
-$(function() {
-	$(".box").click(function() {
-		alert("Hope you enjoy your boilerplate ;)");
+function popup() {
+	var $close_btn = $('.close-btn');
+	var $popup_container = $('.popup-container');
+
+	setTimeout(function() {
+		$popup_container.animate({'opacity': 1});
+		$popup_container.css('display', 'flex');
+	}, 5000);
+
+	$close_btn.click(function() {
+		$popup_container.animate({'opacity': 0});
+		$popup_container.css('display', 'none');
 	});
+}
+
+$(document).ready(function() {
+
+	var $scroll_Top_Btn = $('.scroll-top-btn');
+
+	$scroll_Top_Btn.on('click', function() {
+	var $containerTop = $('.container').offset().top;
+	var $body = [$('html'), $('body')];
+
+		$body[0].animate({
+			scrollTop: $containerTop
+		}, 1000);
+
+		$body[1].animate({
+			scrollTop: $containerTop
+		}, 1000);
+
+		console.log('working');
+	});
+
+	$(window).scroll(function() {
+
+	var wScroll = $(this).scrollTop();
+	var $bodyMid = $('body').height() * 0.5;
+
+		if(wScroll > $bodyMid ) {
+			$scroll_Top_Btn.css('opacity', 1);
+		} else {
+			$scroll_Top_Btn.css('opacity', 0);
+		}
+	});
+	
 });
-//---------- TESTING CLICK EVENT ENDS HERE ----------//
+
 
 //-- ANGULAR MODULE STARTS HERE --//
 var myApp = angular.module('myApp', ['ngAnimate']);

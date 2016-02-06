@@ -1,0 +1,34 @@
+.popup-container {
+	background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: none;
+    align-items: center;
+    opacity: 0;
+
+    .popup-content {
+    	height: 450px;
+	    width: 400px;
+	    background-color: white;
+	    margin: 0 auto;
+
+	    .close-btn {
+			float: right;
+			color:black;
+			padding: 27px 10px;
+		}
+
+	    h1 {
+	    	clear: both;
+	    	text-align: center;
+	    	padding-bottom: 10px;
+	    }
+
+	    p {
+	    	text-align: center;
+	    	padding: 0 5px;
+	    }
+    }
+}
